@@ -1,8 +1,4 @@
 @media only screen and (max-width: 1071px) {
-    .body-color {
-        background-color: palegreen;
-    }
-
     .profile-main-pic {
         height: 450px;
     }
@@ -23,10 +19,6 @@
 }
 
 @media only screen and (max-width: 901px) {
-    .body-color {
-        background-color: forestgreen;
-    }
-
     .profile-main-pic {
         height: 350px;
     }
@@ -37,10 +29,6 @@
 }
 
 @media only screen and (max-width: 611px) {
-    .body-color {
-        background-color: bisque;
-    }
-
     .logo {
         width: 30px;
         height: 30px;
@@ -68,11 +56,13 @@
     }
 
     .project {
-        width: 100%;         
+        width: 100%;
         margin: 0 0 15px 0;
     }
 }
 
 @media only screen and (max-width: 360px) {
-
+    .profile-description {
+        font-size: 80%;
+    }
 }
