@@ -26,16 +26,12 @@ Portfolio.Events = {
         let parents = $(e.target).parents();
         if (parents) {
             if (parents.hasClass('project-1')) {
-                //$(".project-1 .project-front").fadeOut();
                 $(".project-1 .project-front").css('opacity', 0);
-                //$(".project-1 .project-front").show();
                 $(".project-1 .project-back").removeClass("hidden");
             } else if (parents.hasClass('project-2')) {
-                //$(".project-2 .project-front").fadeOut();
                 $(".project-2 .project-front").css('opacity', 0);
                 $(".project-2 .project-back").removeClass("hidden");
             } else if (parents.hasClass('project-3')) {
-                //$(".project-3 .project-front").fadeOut();
                 $(".project-3 .project-front").css('opacity', 0);
                 $(".project-3 .project-back").removeClass("hidden");
             }
@@ -48,15 +44,12 @@ Portfolio.Events = {
             if (parents.hasClass('project-1')) {
                 $(".project-1 .project-back").addClass("hidden");
                 $(".project-1 .project-front").css('opacity', 1);
-                //$(".project-1 .project-front").delay(100).slideDown("hidden");
             } else if (parents.hasClass('project-2')) {
                 $(".project-2 .project-back").addClass("hidden");
                 $(".project-2 .project-front").css('opacity', 1);
-                //$(".project-2 .project-front").delay(100).slideDown("hidden");
             } else if (parents.hasClass('project-3')) {
                 $(".project-3 .project-back").addClass("hidden");
                 $(".project-3 .project-front").css('opacity', 1);
-                //$(".project-3 .project-front").delay(100).slideDown("hidden");
             }
         }
     }
