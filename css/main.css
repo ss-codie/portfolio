@@ -57,7 +57,7 @@ body {
 }
 
 .profile-main-pic {
-    height: 600px;
+    height: 480px;
     width: 100%;
 }
 
@@ -73,7 +73,8 @@ body {
     margin: 15px 0 0 0;
 }
 
-.featured-work {
+.personal-work,
+.professional-work {
     color:#7d97ad;
 }
 
@@ -138,7 +139,7 @@ body {
 }
 
 .project-content-back-title {
-    font-size: 2em;
+    font-size: 1.5em;
     text-decoration: underline;
     color: #6b7088;
 }

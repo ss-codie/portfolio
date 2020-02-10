@@ -2,12 +2,31 @@ Portfolio = {
 
 };
 
+Portfolio.ProjectSections = {
+    sections: {
+        'professional-project-1': true,
+        'professional-project-2': true,
+        'professional-project-3': true,
+        'professional-project-4': true,
+        'professional-project-5': true,
+        'professional-project-6': true,
+        'professional-project-7': true,
+        'professional-project-8': true,
+        'professional-project-9': true,
+        'professional-project-10': true,
+        'professional-project-11': true,
+        'professional-project-12': true,
+        'personal-project-1': true,
+        'personal-project-2': true,
+        'personal-project-3': true
+    }
+};
+
 Portfolio.Consts = {
     DEBUG: 1
 };
 
 Portfolio.UI = {
-
 };
 
 Portfolio.Events = {
@@ -25,15 +44,13 @@ Portfolio.Events = {
     onProjectFrontTransitionend: function(e) {
         let parents = $(e.target).parents();
         if (parents) {
-            if (parents.hasClass('project-1')) {
-                $(".project-1 .project-front").css('opacity', 0);
-                $(".project-1 .project-back").removeClass("hidden");
-            } else if (parents.hasClass('project-2')) {
-                $(".project-2 .project-front").css('opacity', 0);
-                $(".project-2 .project-back").removeClass("hidden");
-            } else if (parents.hasClass('project-3')) {
-                $(".project-3 .project-front").css('opacity', 0);
-                $(".project-3 .project-back").removeClass("hidden");
+            const projectSectionNames = Object.keys(Portfolio.ProjectSections.sections);
+            for (let i = 0; i < projectSectionNames.length; ++i) {
+                const projectSectionName = projectSectionNames[i];
+                if (parents.hasClass(projectSectionName)) {
+                    $(`.${projectSectionName} .project-front`).css('opacity', 0);
+                    $(`.${projectSectionName} .project-back`).removeClass("hidden");
+                }
             }
         }
     },
@@ -41,15 +58,13 @@ Portfolio.Events = {
     onProjectBackMouseLeave: function (e) {
         let parents = $(e.target).parents();
         if (parents) {
-            if (parents.hasClass('project-1')) {
-                $(".project-1 .project-back").addClass("hidden");
-                $(".project-1 .project-front").css('opacity', 1);
-            } else if (parents.hasClass('project-2')) {
-                $(".project-2 .project-back").addClass("hidden");
-                $(".project-2 .project-front").css('opacity', 1);
-            } else if (parents.hasClass('project-3')) {
-                $(".project-3 .project-back").addClass("hidden");
-                $(".project-3 .project-front").css('opacity', 1);
+            const projectSectionNames = Object.keys(Portfolio.ProjectSections.sections);            
+            for (let i = 0; i < projectSectionNames.length; ++i) {
+                const projectSectionName = projectSectionNames[i];
+                if (parents.hasClass(projectSectionName)) {
+                    $(`.${projectSectionName} .project-back`).addClass("hidden");
+                    $(`.${projectSectionName} .project-front`).css('opacity', 1);
+                }
             }
         }
     }
