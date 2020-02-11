@@ -18,7 +18,8 @@ Portfolio.ProjectSections = {
         'professional-project-12': true,
         'personal-project-1': true,
         'personal-project-2': true,
-        'personal-project-3': true
+        'personal-project-3': true,
+        'personal-project-4': true,
     }
 };
 
@@ -27,13 +28,20 @@ Portfolio.Consts = {
 };
 
 Portfolio.UI = {
+    isTouchEnabled: false,
+
+    bindPage: function() {
+        Portfolio.UI.isTouchEnabled =  !!('ontouchstart' in window || navigator.maxTouchPoints); 
+        if (!Portfolio.UI.isTouchEnabled) {
+            $('.work-header p').hide();
+        }
+    }
 };
 
 Portfolio.Events = {
     bindEvents: function () {
         try {
             $(".project-front").on('transitionend', Portfolio.Events.onProjectFrontTransitionend);
-
             $(".project-back").mouseleave(Portfolio.Events.onProjectBackMouseLeave);
         }
         catch (ex) {
@@ -80,5 +88,7 @@ Portfolio.Helper = {
 };
 
 $(document).ready(function () {
+    Portfolio.UI.bindPage();
+
     Portfolio.Events.bindEvents();
 })

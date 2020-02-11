@@ -73,6 +73,11 @@ body {
     margin: 15px 0 0 0;
 }
 
+.work-header h1,
+.work-header p {
+    display: inline-block;
+}
+
 .personal-work,
 .professional-work {
     color:#7d97ad;
