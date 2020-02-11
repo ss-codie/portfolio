@@ -75,7 +75,6 @@ Portfolio.Helper = {
         if (Portfolio.Consts.DEBUG === 1) {
             return;
         }
-
         console.log(ex);
     }
 };
